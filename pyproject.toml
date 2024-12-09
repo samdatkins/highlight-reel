@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "highlight-reel"
+version = "0.1.0"
+description = "A tool to process video files and create a stitched output"
+authors = ["Sam Atkins <sam.d.atkins@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "highlight_reel"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+moviepy = "^2.1.1"
+python-dateutil = "^2.9.0.post0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+highlight-reel = "highlight_reel.__main__:main"
